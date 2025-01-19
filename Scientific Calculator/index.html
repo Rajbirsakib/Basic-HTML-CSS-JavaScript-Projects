@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <div class="input-box">
+            <div class="toggle-btn">
+                <i class="fa-regular fa-sun" id="light-mode-btn"></i>
+                <i class="fa-regular fa-moon" id="dark-mode-btn"></i>
+            </div>
+            <input type="text" id="" class="user-input" placeholder="0" readonly>
+            <h3 class="result">0</h3>
+        </div>
+        <div class="btns-box">
+            <button id="ac" class="with-bg-btn" onclick="clearInput()">AC</button>
+            <button id="del-btn" class="with-bg-btn" onclick="backspace()"><i class="fa-solid fa-delete-left"></i></button>
+            <button class="btn with-bg-btn">%</button>
+            <button class="btn with-bg-btn">/</button>
+            <button class="btn">1</button>
+            <button class="btn">2</button>
+            <button class="btn">3</button>
+            <button class="btn with-bg-btn">x</button>
+            <button class="btn">4</button>
+            <button class="btn">5</button>
+            <button class="btn">6</button>
+            
+            <button class="btn with-bg-btn">-</button>
+            <button class="btn">7</button>
+            <button class="btn">8</button>
+            <button class="btn">9</button>
+            <button class="btn with-bg-btn">+</button>
+            <button class="btn shift">0</button>
+            <button class="btn shift">.</button>
+            <button class="btns with-bg-btn shift" onclick="calculate()">=</button>
+        </div>
+        <div class="scientific-btns">
+            <button class="scien-btn" onclick="sin()">sin</button>
+            <button class="scien-btn" onclick="cos()">cos</button>
+            <button class="scien-btn" onclick="tan()">tan</button>
+            <button class="scien-btn" onclick="fact()">x!</button>
+            <button class="scien-btn" onclick="pi()">&#8508;</button>
+            <button class="scien-btn" onclick="log()">log</button>
+            <button class="scien-btn btn">(</button>
+            <button class="scien-btn btn">)</button>
+            <button class="scien-btn" onclick="root()">&#8730;</button>
+            <button class="scien-btn" onclick="e()">e</button>
+            <button class="scien-btn pow-btn" onclick="pow()">x<span class="pow">y</span></button>
+            <button class="back-btn"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
