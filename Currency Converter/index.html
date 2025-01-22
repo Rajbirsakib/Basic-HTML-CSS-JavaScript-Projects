@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container">
+        <img src="img/exchange.png" alt="Coin" class="app-icon">
+        <h3 class="app-title">Currency Converter</h3>
+        <div class="amount">
+            <h3>Enter Amount</h3>
+            <input type="number" id="" class="user-amount" value="1">
+        </div>
+
+        <div class="from-to">
+            <!-- From box start -->
+            <div class="from-box">
+                <h3>From</h3>
+                <div class="from-input">
+                    <div class="from-flag">
+                        <img src="https://flagsapi.com/US/flat/64.png" alt="Flag">
+                    </div>
+                    <input type="text" value="USD" id="" readonly>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="from-country-options"></div>
+            </div>
+            <!-- From box end -->
+
+            <div class="switch-btn">
+                <i class="fa-solid fa-right-left"></i>
+            </div>
+
+            <!-- To box start -->
+            <div class="to-box">
+                <h3>To</h3>
+                <div class="to-input">
+                    <div class="to-flag">
+                        <img src="https://flagsapi.com/BD/flat/64.png" alt="Flag">
+                    </div>
+                    <input type="text" value="BDT" id="" readonly>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="to-country-options"></div>
+            </div>
+            <!-- To box end -->
+        </div>
+
+        <button class="converter-btn">Get Exchange Rate</button>
+        <div class="result-box">
+            <h3 class="result">100 USD = 900.11 BDT</h3>
+        </div>
+    </div>
+    
+
+    <script src="./JS/API-key.js"></script>
+    <script src="./JS/country-list.js"></script>
+    <script src="./JS/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins", serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-size: 200% 200%;
+    height: 100vh;
+}
+
+.container{
+    padding: 20px;
+    width: 320px;
+    background: #fff;
+    border-radius: 7px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s;
+}
+
+.container .app-icon{
+    height: 70px;
+    width: 70px;
+    position: relative;
+    left: 105px;
+}
+
+.container .app-title{
+    text-align: center;
+    font-size: 17px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.container .amount{
+    margin-top: 25px;
+    height: 80px;
+    width: 100%;
+}
+
+.container .amount h3{
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container .amount input{
+    all: unset;
+    height: 42px;
+    width: 94%;
+    border: 1px solid grey;
+    padding-left: 10px;
+    margin-top: 3px;
+    border-radius: 3px;
+}
+
+.container .from-to{
+    height: 100px;
+    width: 100%;
+}
+
+.container .from-box, .container .to-box{
+    height: 100px;
+    width: 50%;
+    padding: 7px;
+}
+
+.container .to-box{
+    position: absolute;
+    right: 20px;
+    margin-top: -100px;
+    width: 44%;
+}
+
+.container .from-box{
+    margin-left: -5px;
+}
+
+.container .from-box h3, .container .to-box h3{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.container .to-box h3{
+    margin-left: 20px;
+}
+
+.container .from-box .from-input, .container .to-box .to-input{
+    height: 45px;
+    width: 110px;
+    border: 1px solid grey;
+    padding: 5px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.container .to-box .to-input{
+    margin-left: 20px;
+}
+
+.container .from-box .from-input .from-flag, .container .to-box .to-input .to-flag{
+    height: 27px;
+    width: 27px;
+    margin-left: 5px;
+}
+
+.container .from-box .from-input .from-flag img, .container .to-box .to-input .to-flag img{
+    height: 27px;
+    width: 27px;
+    position: absolute;
+    left: 35px;
+    margin-top: -1px;
+}
+
+.container .to-box .to-input .to-flag img{
+    left: 38px;
+}
+
+.container .from-box .from-input input, .container .to-box .to-input input{
+    all: unset;
+    height: 30px;
+    width: 40px;
+    text-align: left;
+    position: relative;
+    left: 9px;
+    font-size: 15px;
+}
+
+.container .to-box .to-input input{
+    left: 6px;
+}
+
+.container .from-box .from-input i, .container .to-box .to-input i{
+    font-size: 13px;
+    margin-left: 8px;
+}
+
+.container .switch-btn{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: -45px;
+    cursor: pointer;
+}
+
+.container .converter-btn{
+    all: unset;
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%);
+    color: black;
+    box-shadow: 0 0 20px #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+    margin-top: -8px;
+    cursor: pointer;
+}
+
+.container .result-box{
+    height: 45px;
+    width: 100%;
+    background: rgba(21, 97, 209, 0.2);
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    border-radius: 3px;
+    margin-top: 8px;
+    font-size: 14px;
+    transition: all .2s;
+    display: none;
+}
+
+.container .result-box .result{
+    font-size: 15px;
+    font-weight: 400;
+    position: absolute;
+    transition: all .2s;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: all .2s;
+    margin-top: 22px;
+}
+
+.container .from-country-options, .container .to-country-options{
+    height: 100px;
+    width: 110px;
+    background: #fff;
+    border: 1px solid grey;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 3px;
+    position: absolute;
+    margin-top: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 5px;
+    z-index: 1; 
+    transform: scale(0);
+    transition: all .2s;
+    transform-origin: top;
+}
+
+.container .to-country-options{
+    margin-left: 20px;
+}
+
+.container .from-country-options::-webkit-scrollbar, .container .to-country-options::-webkit-scrollbar{
+    display: none;
+}
+
+.container .from-country-options li, .container .to-country-options li{
+    height: 30px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    padding: 6px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    padding-left: 50px;
+    cursor: pointer;
+}
+
+.container .from-country-options li img, .container .to-country-options li img{
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    left: 20px;
+}
+
+.container .from-country-options.active, .container .to-country-options.active{
+    transform: scale(1);
+    transition: all .2s;
+    transform-origin: top;
+}
