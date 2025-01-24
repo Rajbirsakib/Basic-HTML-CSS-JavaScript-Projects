@@ -1,0 +1,210 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #131418;
+    font-family: "Amatic SC", serif;
+    /* font-family: "Paytone One", serif; */
+}
+
+.container{
+    padding: 15px;
+    height: 470px;
+    width: 370px;
+    background: #fec601;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 3px;
+    overflow: hidden;
+    transition: all .2s;
+}
+
+.container h2{
+    text-align: center;
+    color: #fff;
+    font-size: 25px;
+}
+
+.container .timer-box, .container .score-box{
+    height: 30px;
+    width: 100px;
+    background: #a4550a;
+    padding: 7px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    float: left;
+    margin-left: 55px;
+    margin-top: 13px;
+}
+
+.container .timer-box{
+    width: 80px;
+}
+
+.container .timer-box .timer, .container .score-box .score{
+    height: 22px;
+    width: 40px;
+    background: #3c1802;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+    margin-left: 8px;
+    position: relative;
+    left: 20px;
+    font-family: "Paytone One", serif;
+}
+
+.container .timer-box .timer{
+    left: 3px;
+}
+
+.container .score-box .score{
+    left: 6px;
+}
+
+.container .timer-box i, .container .score-box .score-text{
+    margin-left: 7px;
+    font-size: 13px;
+}
+
+.container .score-box .score-text{
+    font-size: 16px;
+}
+
+.container .all-items{
+    height: 300px;
+    width: 100%;
+    position: relative;
+    top: 60px;
+}
+
+.container .all-items .item{
+    height: 70px;
+    width: 70px;
+    background: #3c1802;
+    border-radius: 100%;
+    float: left;
+    margin-left: 32px;
+    margin-top: 20px;
+    position: relative;
+    top: -30px;
+}
+.container .all-items .item .whack-text{
+    font-family: "Paytone One", serif;
+    position: absolute;
+    bottom: -5px;
+    color: #fff;
+    z-index: 1;
+    margin-left: 3px;
+    user-select: none;
+}
+
+.container .all-items .item .hole{
+    height: 65px;
+    width: 65px;
+    background: #a4550a;
+    border-radius: 100%;
+    position: relative;
+    top: 5px;
+    left: 3px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.container .all-items .item .hole img{
+    height: 55px;
+    width: 100px;
+    position: absolute;
+    bottom: -53px;
+    transition: all .2s;
+    user-select: none;
+}
+.container .all-items .item .hole img.mole-appeared{
+    bottom: -5px;
+    transition: all .2s;
+}
+
+.container .start-game-btn{
+    all: unset;
+    height: 35px;
+    width: 130px;
+    border: 3px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    text-align: center;
+    
+}
+.container .start-game-btn:hover {
+    border: 3px solid black;
+    color: black;
+}
+
+.container .game-over{
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.container .game-over h3, .container .game-over .your-score-txt, .container .game-over .game-over-score{
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 150px;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+}
+
+.container .game-over .your-score-txt{
+    font-size: 25px;
+    top: 210px;
+}
+
+.container .game-over .game-over-score{
+    top: 240px;
+    font-size: 25px;
+    font-family: "Paytone One", serif;
+}
+
+.container .game-over button{
+    all: unset;
+    height: 35px;
+    width: 100px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    float: left;
+    margin-left: 55px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 130px;
+}
+
+.container .game-over .play-again-btn{
+    right: 60px;
+}
